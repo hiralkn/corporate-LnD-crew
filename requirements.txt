@@ -1,8 +1,7 @@
-crewai==0.80.0
-gradio==5.0.0
-pydantic==2.10.0
-chromadb==0.5.3
-python-dotenv==1.0.1
-langchain-openai==0.3.0
-langchain-community==0.3.0
-huggingface_hub==0.24.7
+crewai
+gradio
+pydantic
+chromadb
+python-dotenv
+langchain-openai
+langchain-community
