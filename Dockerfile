@@ -7,8 +7,9 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /code
 
-# Copy your dependency rules first to optimize caching speeds
+# Copy and install sanitized requirements directly
 COPY ./requirements.txt /code/requirements.txt
+RUN pip install --no-cache-dir --upgrade pip
 RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
 # Copy all application code into the file architecture container
