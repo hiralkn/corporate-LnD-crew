@@ -1,0 +1,25 @@
+curriculum_analysis_task:
+  description: >
+    Search through the uploaded company engineering or architecture documentation text using your tools.
+    Identify the current programming languages used, the target system architecture migration plan, and explicit developer skill gaps.
+  expected_output: >
+    A clear Markdown summary mapping out the company's technical blueprint and specific internal training goals.
+  agent: curriculum_analyst
+
+tech_trend_research_task:
+  description: >
+    Investigate live documentation and optimal tutorials for the target skill or framework: "{target_technology}".
+    Find the latest stable versions, deprecation warnings, and standard reference architectures.
+  expected_output: >
+    A comprehensive regional industry profile outlining current tech documentation standards and required learning modules.
+  agent: tech_trend_researcher
+
+program_generation_task:
+  description: >
+    Review the target developer team's profile: "{developer_current_profile}".
+    Cross-reference their current baseline with the internal documentation gaps and the live tech research.
+    Determine whether the team is ready for an accelerated path or needs foundational modules ("ACCELERATED", "STANDARD", or "FOUNDATIONAL_REQUIRED").
+    Draft a comprehensive, week-by-week Technical Upskilling Curriculum complete with practical hands-on mini-projects.
+  expected_output: >
+    A strict JSON schema report detailing the training track classification, difficulty rating, key missing prerequisites, and a complete week-by-week learning syllabus.
+  agent: training_program_director
