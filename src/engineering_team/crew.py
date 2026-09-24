@@ -28,12 +28,12 @@ class EngineeringTeamCrew():
 
     @agent
     def tech_trend_researcher(self) -> Agent:
-        from crewai_tools import SerperDevTool
         return Agent(
             config=self.agents_config['tech_trend_researcher'],
-            tools=[SerperDevTool()], # Gives the agent live web intelligence capabilities
+            tools=[], # Removing SerperDevTool removes the final heavy web dependency
             verbose=True
         )
+
 
     @agent
     def training_program_director(self) -> Agent:

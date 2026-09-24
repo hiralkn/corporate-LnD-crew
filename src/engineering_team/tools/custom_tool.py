@@ -8,7 +8,7 @@ from crewai.tools import tool
 _training_vector_store = None
 
 def initialize_training_rag(file_path: str):
-    """Parses user-uploaded training guidelines or architecture documents into dynamic Chroma vector indices."""
+    """Parses user-uploaded training guidelines into dynamic Chroma vector indices."""
     global _training_vector_store
     
     with open(file_path, "r", encoding="utf-8") as f:
